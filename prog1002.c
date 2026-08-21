@@ -1,14 +1,15 @@
 #include <stdio.h>
+#include <math.h>
 
-double raio_ao_quadrado ()
-{
-    double raio;
-    scanf("%lf", &raio);
-    return raio*raio;
+double calcularArea(double raio, double n) {
+    return n * pow(raio, 2);
 }
 
-main ()
-{
-    double area = raio_ao_quadrado() * 3.14159;
-    printf("A=%.4f\n",area);
+int main() {
+    double raio, area, n = 3.14159;
+    scanf("%lf", &raio);
+
+    area = calcularArea(raio, n);
+
+    printf("A=%.4lf\n", area);
 }
